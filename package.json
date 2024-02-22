@@ -1,24 +1,22 @@
 {
-  "name": "mock-html",
+  "name": "express-vercel",
   "version": "1.0.0",
-  "description": "mock-html",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.18.2"
-  },
+  "description": "Deploy express js to vercel.",
+  "main": "index.js",
   "engines": {
-    "node": ">=12.0.0"
+    "node" : "14.x"
   },
-  "license": "MIT",
-  "vercel": {
-    "builds": [
-      {
-        "src": "server.js",
-        "use": "@vercel/node"
-      }
-    ]
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arorasmail/mockHTML.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
