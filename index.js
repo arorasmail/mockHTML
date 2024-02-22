@@ -1,27 +1,10 @@
-// Import required modules
-const express = require('express');
-
-// Create an Express application
+const express = require("express");
 const app = express();
+const product = require("./api/product");
 
-// Define a route that returns HTML
-app.get('/', (req, res) => {
-    // HTML content to be returned
-    const htmlContent = `
-Testing Auth
-    `;
+app.use(express.json({ extended: false }));
 
-    // Set Content-Type header to indicate HTML content
-    res.setHeader('Content-Type', 'text/html');
+app.use("/api/product", product);
 
-    // Send the HTML content as the response
-    res.send(htmlContent);
-});
-
-// Define the port to listen on
-const PORT = process.env.PORT || 3000;
-
-// Start the server
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => console.log(`Server is running in port ${PORT}`));
