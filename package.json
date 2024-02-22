@@ -1,5 +1,24 @@
 {
+  "name": "mock-html",
+  "version": "1.0.0",
+  "description": "mock-html",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "license": "MIT",
+  "vercel": {
+    "builds": [
+      {
+        "src": "server.js",
+        "use": "@vercel/node"
+      }
+    ]
   }
 }
